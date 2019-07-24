@@ -1,0 +1,204 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+full_text=
+align=center
+separator=false
+separator_block_width=1
+color=#666666
+
+# Global properties
+separator_block_width=8
+
+#[memory]
+#label=MEM
+#command=/usr/share/i3blocks/memory
+#interval=30
+
+#[swap]
+#label=SWAP
+#instance=swap
+#command=/usr/share/i3blocks/memory
+#interval=30
+
+#[icons]
+#command=echo "<span font_desc='FontAwesome'>fa fa-arrow-up</span>"
+#markup=pango
+#interval=once
+
+[separator]
+
+[bandwidth]
+full_text=
+instance=eth1
+command=/home/wigglytuff/code/i3blocks-scripts/bandwidth
+interval=2
+color=#875fd7
+
+#[separator]
+
+#[bandwidtheth]
+#full_text=
+#instance=wlan2
+#command=/home/wigglytuff/code/i3blocks-scripts/bandwidth
+#interval=2
+#color=#875fd7
+
+[separator]
+
+[weather]
+full_text=
+command=/home/wigglytuff/code/i3blocks-scripts/weather.sh Derby
+interval=120
+color=#875fd7
+
+[separator]
+
+#[cpu]
+#label=ꖛ
+#command=/usr/share/i3blocks/cpu_usage
+#interval=2
+#min_width=CPU: 100.00%
+#color=#00afff
+
+#[load]
+#command=/usr/share/i3blocks/load_average
+#interval=3
+#color=#875fd7
+
+[disk-home]
+full_text=
+label=⛁
+command=/home/wigglytuff/code/i3blocks-scripts/disk
+interval=30
+color=#875fd7
+
+[separator]
+
+#[icinga]
+#full_text=
+#command=/home/wigglytuff/code/i3blocks-scripts/icingaflume
+#interval=300
+#color=#00afff
+
+#[separator]
+
+[openvpn]
+full_text=
+command=/home/wigglytuff/code/i3blocks-scripts/vpncheck
+interval=5
+color=#00afff
+
+[separator]
+
+#[hamachi]
+#full_text=
+#command=/home/wigglytuff/code/i3blocks-scripts/hamachicheck
+#interval=5
+#color=#00afff
+
+#[separator]
+
+#[apt]
+#full_text=
+#command=/home/wigglytuff/code/i3blocks-scripts/apt
+#interval=30
+#color=#875fd7
+
+[ip]
+full_text=
+command=echo -n "IP: " && curl http://dynamicdns.park-your-domain.com/getip
+interval=120
+color=#875fd7
+
+[separator]
+
+#[wifi]
+#full_text=
+#command=/home/wigglytuff/code/i3blocks-scripts/wifi
+#interval=3
+#color=#875fd7
+#
+#[separator]
+
+#[wireless]
+#label=WLAN0
+#instance=wlan0
+#command=/usr/share/i3blocks/network
+#interval=10
+
+#[publicip]
+#label=PUBLICIP
+#command=/home/wigglytuff/code/i3blocks-scripts/publicip
+#interval=30
+
+#[ethernet]
+#label=ETH0
+#instance=eth0
+#command=/usr/share/i3blocks/network
+#interval=10
+
+[nowplaying]
+full_text=
+command=/home/wigglytuff/code/i3blocks-scripts/nowplaying
+interval=1
+signal=1
+color=#875fd7
+
+[separator]
+
+[volume]
+full_text=
+label=♬
+command=pactl list sinks | grep "Volume: 0:" | awk '{print $3}' 
+interval=once
+signal=1
+color=#875fd7
+
+[separator]
+
+#[acpi]
+#full_text=
+#command=acpi --battery > bat; sed -i -e 's/ until charged//g' bat; sed -i -e 's/Battery 0: //g' bat; sed -i -e 's/ remaining//g' bat; sed -i -e 's/,//g' bat; cat bat; rm bat
+#interval=3
+#color=#875fd7
+
+#[battery]
+#command=/home/wigglytuff/code/i3blocks-scripts/battery BAT0
+#interval=5
+#color=#875fd7
+
+#[battery]
+#command=/home/wigglytuff/code/i3blocks-scripts/battery
+#label=Battery
+#interval=30
+#color=#875fd7
+
+#[separator]
+
+[time]
+full_text=
+command=date '+%d%m%Y %H%M%S'
+interval=3
+color=#a2df4a
+
+[separator]
