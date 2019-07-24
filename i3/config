@@ -40,12 +40,12 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id xfsettingsd
 exec –no-startup-id sleep 3 && xfce4-power-manager
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
-#exec /home/sean/.screenlayout/dual_monitor_work.sh
+#exec ~/.screenlayout/dual_monitor_work.sh
 
 
 
 # custom program launchers
-bindsym $mod+z exec /home/sean/morc_menu/morc_menu
+bindsym $mod+z exec ~/morc_menu/morc_menu
 
 
 # start dmenu (a program launcher)
@@ -67,8 +67,8 @@ bindsym $mod+Tab exec rofi -show window -width 60 -font "Liberation Mono 15"
 #bindsym $mod+F5 exec playonlinux
 #bindsym $mod+F6 exec xfce4-settings-manager
 
-bindsym $mod+F9 exec /home/lordgaben/de-scripts/toggle/onoff-xfce4-panel.sh
-bindsym $mod+F12 exec /home/lordgaben/de-scripts/toggle/onoff-compton.sh
+bindsym $mod+F9 exec ~/de-scripts/toggle/onoff-xfce4-panel.sh
+bindsym $mod+F12 exec ~/de-scripts/toggle/onoff-compton.sh
 
 #bindsym $mod+F12 exec synaptic-pkexec
 
@@ -143,7 +143,7 @@ bindsym $mod+F4 mode "$Displays"
 set $Displays (1) Home
 mode "$Displays" {
 
-    bindsym 1 exec --no-startup-id /home/lordgaben/.screenlayout/home.sh; focus; mode "default"
+    bindsym 1 exec --no-startup-id ~/.screenlayout/home.sh; focus; mode "default"
 
 
     # exit system mode: "Enter" or "Escape"
